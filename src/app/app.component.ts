@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
+import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,ButtonModule,TableModule],
+  imports: [RouterOutlet,ButtonModule,TableModule,CardModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

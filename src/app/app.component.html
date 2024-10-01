@@ -1,4 +1,4 @@
-<p-button 
+<!-- <p-button 
   pButton 
   pRipple 
   label="Submit" 
@@ -22,4 +22,25 @@
           <td>{{ product.quantity }}</td>
       </tr>
   </ng-template>
-</p-table>
+</p-table> -->
+
+<div class="justify-content-center">
+
+  <p-card header="Advanced Card" subheader="Card Subheader" [style]="{ width: '360px' }"  >
+  
+    <ng-template pTemplate="header">
+        <img alt="Card" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+    </ng-template>
+    <p>
+        Lorem ipsum dolor sit amet...
+    </p>
+    <ng-template pTemplate="footer">
+        <div class="flex gap-3 mt-1">
+            <p-button label="Cancel" severity="secondary" class="w-5" styleClass="w-full" />
+            <p-button label="Save" class="w-full" styleClass="w-full" />
+        </div>
+    </ng-template>
+  </p-card>
+
+</div>
+
