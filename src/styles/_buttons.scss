@@ -1,13 +1,16 @@
 // _buttons.scss
-.btn-primary {
-    background-color: $primary-color;
+.p-button {
     border: none;
-    color: #fff;
     padding: 10px 20px;
-}
-  
-.btn-secondary {
-    background-color: $secondary-color;
-    border: none;
-    color: #fff;
+
+    .primary {
+        background-color: $primary-color;
+        color: #fff;  
+    }
+    .secondary {
+        background-color: $secondary-color;
+        color: #fff;  
+    }
+
+
 }
