@@ -1,4 +1,4 @@
-<div class="">
+<!-- <div class="">
 
     <p-card header="Advanced Card" subheader="Card Subheader" [style]="{ width: '360px' }"  >
     
@@ -16,4 +16,42 @@
       </ng-template>
     </p-card>
   
-  </div>
+  </div> -->
+
+  <p-card [style]="{ width: '360px' }" >
+    <ng-template pTemplate="header">
+      <div>{{ title }}</div>
+    </ng-template>
+  
+    <!-- Image or Carousel -->
+    <div *ngIf="isSingleImage">
+      <img [src]="images[0]" alt="Image" style="width: 100%; height: auto;" />
+    </div>
+  
+    <p-carousel *ngIf="!isSingleImage" [value]="images" [numVisible]="1" [circular]="true" [numScroll]="1">
+      <ng-template pTemplate="item" let-image>
+        <div class="border-1 surface-border border-round m-2 p-3">
+
+       
+        <div class="relative mx-auto">
+            
+        <img [src]="image" alt="Carousel Image" style="width: 100%; height: auto;" />
+    </div>
+</div>
+      </ng-template>
+    </p-carousel>
+  
+    <p>{{ textContent }}</p>
+  
+    <ng-template pTemplate="footer">
+      <div class="flex gap-3 mt-1">
+        <p-button label="Cancel" severity="secondary" class="w-5" styleClass="w-full"></p-button>
+        <p-button label="Save" class="w-5" styleClass="w-full"></p-button>
+      </div>
+    </ng-template>
+  </p-card>
+
+  <!-- card primeng -->
+
+  
+  

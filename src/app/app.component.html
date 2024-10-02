@@ -28,8 +28,14 @@
   <app-top-bar></app-top-bar>
 </div>
 
-<div>
-  <app-card></app-card>
+<div class="card mt-20">
+  <app-card [title]="'Home'" 
+  [textContent]="'Some Content here'"
+   [images]="[
+  'https://akabia.fr/sites/default/files/styles/responsive_image_2000/public/media/image/angular-logo.png?itok=m_BEl8pZ',
+  'https://openfeature.dev/img/blog/2024-09-17-announcing-angular-sdk/angular.png',
+  'https://miro.medium.com/v2/resize:fit:1400/1*bMgQ8MhbnQexpqHgIgBJPA.png'
+]"></app-card>
 </div>
 
 <!-- <div>
