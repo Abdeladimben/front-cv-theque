@@ -3,11 +3,14 @@ import { RouterOutlet } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { CardModule } from 'primeng/card';
+import { SideBarComponent } from "./shared/side-bar/side-bar.component";
+import { TopBarComponent } from "./shared/top-bar/top-bar.component";
+import { CardComponent } from "./shared/card/card.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,ButtonModule,TableModule,CardModule],
+  imports: [RouterOutlet, ButtonModule, TableModule, CardModule, SideBarComponent, TopBarComponent, CardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

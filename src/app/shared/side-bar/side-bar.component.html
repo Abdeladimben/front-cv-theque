@@ -1,5 +1,14 @@
 <div>
+    <p-sidebar [(visible)]="sidebarVisible">
+        <div class="card flex justify-content-center">
+            <p-panelMenu [model]="items" [style]="{'width':'300px'}" [multiple]="true" />
+        </div>
+        
+    </p-sidebar>
+    <p-button (onClick)="sidebarVisible = true" class="mr-2" icon="pi pi-bars"></p-button>
 
+    
 
-  
+    <!-- <i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
+    <i class="pi pi-spin pi-cog" style="font-size: 2rem"></i> -->
 </div>

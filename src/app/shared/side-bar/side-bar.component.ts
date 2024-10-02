@@ -1,14 +1,108 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { SidebarModule } from 'primeng/sidebar';
+import { ButtonModule } from 'primeng/button';
+import { MenuItem, PrimeIcons } from 'primeng/api';
+import { PanelMenuModule } from 'primeng/panelmenu';
+
 
 @Component({
   selector: 'app-side-bar',
   standalone: true,
-  imports: [],
+  imports: [SidebarModule, ButtonModule,PanelMenuModule],
   templateUrl: './side-bar.component.html',
   styleUrl: './side-bar.component.scss'
 })
-export class SideBarComponent {
+export class SideBarComponent implements OnInit{
+
+
+  sidebarVisible: boolean = false;
+
+  items : MenuItem[]=[];
+
+
+  ngOnInit() {
+    this.items = [
+        {
+            label: 'Files',
+            icon: 'pi pi-file',
+            items: [
+                {
+                    label: 'Documents',
+                    icon: 'pi pi-file',
+                    items: [
+                        {
+                            label: 'Invoices',
+                            icon: 'pi pi-file-pdf',
+                            items: [
+                                {
+                                    label: 'Pending',
+                                    icon: 'pi pi-stop'
+                                },
+                                {
+                                    label: 'Paid',
+                                    icon: 'pi pi-check-circle'
+                                }
+                            ]
+                        },
+                        {
+                            label: 'Clients',
+                            icon: 'pi pi-users'
+                        }
+                    ]
+                },
+                {
+                    label: 'Images',
+                    icon: 'pi pi-image',
+                    items: [
+                        {
+                            label: 'Logos',
+                            icon: 'pi pi-image'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            label: 'Cloud',
+            icon: 'pi pi-cloud',
+            items: [
+                {
+                    label: 'Upload',
+                    icon: 'pi pi-cloud-upload'
+                },
+                {
+                    label: 'Download',
+                    icon: 'pi pi-cloud-download'
+                },
+                {
+                    label: 'Sync',
+                    icon: 'pi pi-refresh'
+                }
+            ]
+        },
+        {
+            label: 'Devices',
+            icon: 'pi pi-desktop',
+            items: [
+                {
+                    label: 'Phone',
+                    icon: 'pi pi-mobile'
+                },
+                {
+                    label: 'Desktop',
+                    icon: 'pi pi-desktop'
+                },
+                {
+                    label: 'Tablet',
+                    icon: 'pi pi-tablet'
+                }
+            ]
+        }
+    ]
+}
 
   
 
 }
+
+
