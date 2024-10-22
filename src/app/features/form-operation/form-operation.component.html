@@ -1,0 +1,26 @@
+<div class="formgrid grid" id="form-element">
+  <div class="field col-12 md:col-6">
+      <label for="code">Code</label>
+      <input id="code" type="text" [(ngModel)]="infoInputs.code" (input)="onFormChange()" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+  </div>
+  <div class="field col-12 md:col-6">
+      <label for="name">Name</label>
+      <input id="name" type="text" [(ngModel)]="infoInputs.name" (input)="onFormChange()" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+  </div>
+  <div class="field col-12">
+      <label for="description">Description</label>
+      <textarea id="description" type="text" [(ngModel)]="infoInputs.description" (input)="onFormChange()" rows="4" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"></textarea>
+    </div>
+    <div class="field col-12 md:col-3">
+      <label for="category">Category</label>
+      <input id="category" type="text" [(ngModel)]="infoInputs.category" (input)="onFormChange()" rows="4" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"/>
+  </div>
+  <div class="field col-12 md:col-6">
+      <label for="quantity">Quantity</label>
+      <input id="quantity" type="text" [(ngModel)]="infoInputs.quantity" (input)="onFormChange()" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+  </div>
+  <div class="field col-12 md:col-3">
+      <label for="inventoryStatus">Inventory Status</label>
+      <input id="inventoryStatus" type="text" [(ngModel)]="infoInputs.inventoryStatus" (input)="onFormChange()" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+  </div>
+</div>

@@ -1,5 +1,7 @@
 <app-top-bar></app-top-bar>
-<div class="m-6">
+<app-table-comp [checkRow]="true" [listEnregistrementsColone]="EnregistrementsColone" [listEnregistrements]="enregistrements" [btnActions]="actionListe"></app-table-comp>
+<!-- <app-table-comp [checkRow]="true" [listEnregistrementsColone]="EnregistrementsColone" [listEnregistrements]="enregistrements"></app-table-comp> -->
+<!-- <div class="m-6">
   <div class="flex justify-content-end flex-wrap">
     <button
     pButton
@@ -36,4 +38,15 @@
         </tr>
     </ng-template>
   </p-table>
+</div> -->
+
+
+<!-- <div class="vertical-align-baseline m-5">
+  <div class="field w-3 m-auto">
+    @for (tes of testes; track tes){
+      <li>{{ tes }}</li>
+    }
+  </div>
 </div>
+<app-teste [testeValue]="currentTeste" (testValueEmit)="addTeste($event)"></app-teste> -->
+

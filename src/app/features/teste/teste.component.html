@@ -1,0 +1,26 @@
+<!-- <div class="vertical-align-baseline">
+  <div class="field w-3 m-auto">
+    <label for="firstname1">Label</label>
+    <input #myTitle (keyup)="keyup(myTitle.value)" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+  </div>
+  <div class="field text-center">
+    <h5 for="lastname1">{{ varText }}</h5>
+  </div>
+</div> -->
+
+<div class="vertical-align-baseline m-5">
+  <div class="field w-3 m-auto">
+    <label for="firstname1">Label</label>
+    <div class="flex">
+      <input [(ngModel)]="varText" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" #newTeste>
+      <p-button (click)="addNewTeste(newTeste.value)" label="Add" />
+    </div>
+  </div>
+  <div class="field text-center">
+    <h5 for="lastname1">{{ varText }}</h5>
+  </div>
+  <div class="field text-center">
+    <h5 for="lastname1">{{ testeValue }}</h5>
+  </div>
+</div>
+

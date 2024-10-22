@@ -5,9 +5,41 @@
     color: #fff;
     padding: 10px 20px;
 }
-  
+
 .btn-secondary {
     background-color: $secondary-color;
     border: none;
     color: #fff;
+}
+
+/*The importance or impact level of messages or errors*/
+.info {
+  background-color: lightblue;
+  color: darkblue;
+  padding: 1.8rem 0rem 0rem;
+  border-radius: 3rem;
+}
+
+.success {
+  background-color: lightgreen;
+  color: darkgreen;
+  padding: 1.8rem 0rem 0rem;
+  border-radius: 3rem;
+}
+
+.warning {
+  background-color: lightyellow;
+  color: darkorange;
+  padding: 1.8rem 0rem 0rem;
+  border-radius: 3rem;
+}
+
+.error {
+  background-color: lightcoral;
+  color: darkred;
+  padding: 1.8rem 0rem 0rem;
+  border-radius: 3rem;
+}
+p-button.p-element > button{
+  color: #000;
 }
