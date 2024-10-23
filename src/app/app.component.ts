@@ -7,7 +7,7 @@ import { SharedModule } from './shared/shared.module';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,ButtonModule,TableModule,SharedModule],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

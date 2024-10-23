@@ -1,0 +1,14 @@
+<div class="layout-wrapper layout-background" [ngClass]="containerClass">
+    <cv-topbar></cv-topbar>
+    <div class="layout-sidebar">
+        <cv-sidebar></cv-sidebar>
+    </div>
+    <div class="layout-main-container">
+        <div class="layout-main">
+            <router-outlet></router-outlet>
+        </div>
+        <cv-footer></cv-footer>
+    </div>
+    <cv-config></cv-config>
+    <div class="layout-mask"></div>
+</div>

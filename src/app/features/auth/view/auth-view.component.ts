@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-auth-view.component.ts',
+  selector: 'cv-auth-view.component.ts',
   standalone: true,
   imports: [],
   templateUrl: './auth-view.component.html',

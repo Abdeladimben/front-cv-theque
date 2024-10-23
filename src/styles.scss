@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'styles/theme';
 @import 'styles/variables';
 @import 'styles/mixins';
-@import 'styles/base';
 @import 'styles/typography';
+@import 'styles/theme';
+@import 'styles/scroll-bar';
+@import 'styles/base';
 @import 'styles/buttons';
 @import 'styles/layout';

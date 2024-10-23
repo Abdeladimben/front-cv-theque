@@ -1,0 +1,16 @@
+@import 'layout/variables';
+@import "layout/mixins";
+@import "layout/preloading";
+@import "layout/main";
+@import "layout/topbar";
+@import "layout/menu";
+@import "layout/config";
+@import "layout/content";
+@import "layout/footer";
+@import "layout/responsive";
+@import "layout/utils";
+@import "layout/typography";
+
+.layout-background{
+    background:$background-light__blue-gardient__color;
+}
