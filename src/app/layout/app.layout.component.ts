@@ -1,3 +1,4 @@
+import { ThemeService } from './../core/services/theme.service';
 import { Component, OnDestroy, Renderer2, ViewChild } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
@@ -11,12 +12,13 @@ import { InputTextModule } from 'primeng/inputtext';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { RippleModule } from 'primeng/ripple';
 import { SidebarModule } from 'primeng/sidebar';
-import { AppConfigComponent } from './config/app.config.component';
+import { AppConfigComponent } from './config-bar/app.config.component';
 import { AppFooterComponent } from './component/footer/app.footer.component';
 import { NgClass } from '@angular/common';
+import { ThemeEnum } from '../core/enums/theme.enum';
 
 @Component({
-    selector: 'cv-layout',
+    selector: 'custom-layout',
     templateUrl: './app.layout.component.html',
     standalone: true,
     imports: [
@@ -42,17 +44,25 @@ export class AppLayoutComponent implements OnDestroy {
 
     profileMenuOutsideClickListener: any;
 
+    currentTheme: string = ThemeEnum.LIGHT;
+
     @ViewChild(AppSidebarComponent) appSidebar!: AppSidebarComponent;
 
     @ViewChild(AppTopBarComponent) appTopbar!: AppTopBarComponent;
 
-    constructor(public layoutService: LayoutService, public renderer: Renderer2, public router: Router) {
+    constructor(
+      public layoutService: LayoutService,
+      private themeService:ThemeService,
+      public renderer: Renderer2,
+      public router: Router
+    ) {
+      this.subscribeToTheme();
         this.overlayMenuOpenSubscription = this.layoutService.overlayOpen$.subscribe(() => {
             if (!this.menuOutsideClickListener) {
                 this.menuOutsideClickListener = this.renderer.listen('document', 'click', event => {
-                    const isOutsideClicked = !(this.appSidebar.el.nativeElement.isSameNode(event.target) || this.appSidebar.el.nativeElement.contains(event.target) 
+                    const isOutsideClicked = !(this.appSidebar.el.nativeElement.isSameNode(event.target) || this.appSidebar.el.nativeElement.contains(event.target)
                         || this.appTopbar.menuButton.nativeElement.isSameNode(event.target) || this.appTopbar.menuButton.nativeElement.contains(event.target));
-                    
+
                     if (isOutsideClicked) {
                         this.hideMenu();
                     }
@@ -132,6 +142,14 @@ export class AppLayoutComponent implements OnDestroy {
             'p-input-filled': this.layoutService.config().inputStyle === 'filled',
             'p-ripple-disabled': !this.layoutService.config().ripple
         }
+    }
+
+    subscribeToTheme(){
+      this.themeService.currentThemeObservable.subscribe((res:ThemeEnum)=>{
+        console.log("res");
+        console.log(res);
+        this.currentTheme = res;
+      })
     }
 
     ngOnDestroy() {

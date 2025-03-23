@@ -1,3 +1,4 @@
+import { ThemeService } from '../../core/services/theme.service';
 import { Component, Input } from '@angular/core';
 import { LayoutService } from '../services/app.layout.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -6,7 +7,9 @@ import { InputSwitchModule } from 'primeng/inputswitch';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { SidebarModule } from 'primeng/sidebar';
 import { NgClass, NgForOf, NgIf, NgTemplateOutlet } from '@angular/common';
-import { MenuService } from '../sidebar/app.menu.service';
+
+import { ThemeEnum } from '../../core/enums/theme.enum';
+import { MenuService } from '../services/app.menu.service';
 
 @Component({
     selector: 'cv-config',
@@ -30,9 +33,12 @@ export class AppConfigComponent {
 
     scales: number[] = [12, 13, 14, 15, 16];
 
+    themeEnum: typeof ThemeEnum = ThemeEnum;
+
     constructor(
         public layoutService: LayoutService,
-        public menuService: MenuService
+        public menuService: MenuService,
+        private themeService:ThemeService
     ) {}
 
     get visible(): boolean {
@@ -103,9 +109,10 @@ export class AppConfigComponent {
         this.layoutService.showConfigSidebar();
     }
 
-    changeTheme(theme: string, colorScheme: string) {
-        this.theme = theme;
-        this.colorScheme = colorScheme;
+    changeTheme(themeEnum:ThemeEnum) {
+      console.log(themeEnum);
+
+        this.themeService.setCurrentThemeObservable(themeEnum);
     }
 
     decrementScale() {

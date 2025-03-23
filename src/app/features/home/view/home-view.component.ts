@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'custom-auth-view',
+  selector: 'custom-home-view',
   standalone: true,
   imports: [
     RouterModule
   ],
-  templateUrl: './auth-view.component.html',
-  styleUrl: './auth-view.component.scss'
+  templateUrl: './home-view.component.html',
+  styleUrl: './home-view.component.scss'
 })
-export class AuthViewComponent {
+export class HomeViewComponent {
 
 }

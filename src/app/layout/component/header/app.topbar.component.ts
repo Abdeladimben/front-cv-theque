@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { LayoutService } from '../../services/app.layout.service';
 import { NgIf, NgClass } from '@angular/common';
@@ -19,6 +19,9 @@ import { RouterModule } from '@angular/router';
     ]
 })
 export class AppTopBarComponent {
+
+    @Input()
+    showMenuButton:boolean=false;
 
     items!: MenuItem[];
 

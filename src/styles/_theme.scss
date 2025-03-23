@@ -1,4 +1,88 @@
-@import "primeng/resources/themes/lara-light-blue/theme.css";
-@import "primeng/resources/primeng.css";
-@import "primeicons/primeicons.css";
 
+
+$themes: (
+  theme-light: (
+    bg-primary: #ffffff,
+    bg-secondary: #d0daac,
+    text-primary: #333333,
+    text-secondary: #666666,
+    accent-color: #007bff,
+
+    //  BUTTON
+    button-bg: #007bff,
+    button-text: #ffffff,
+    button-border-color: #000,
+    button-border-size: 1px,
+    button-border-radius: 2px,
+
+    //  TOPBAR
+
+    top_bar-height:5rem,
+    top_bar-width:100vw,
+    top_bar-position:fixed,
+    top_bar-left:2rem,
+    top_bar-right:2rem,
+    top_bar-padding:0 2rem,
+    top_bar-bg-color:#f9fafb,
+    top_bar-title-color:#000,
+    top_bar-title-size:18px,
+    top_bar-logo-height:40px,
+    top_bar-icon-size:1.5rem,
+    top_bar-menu-color:#000,
+    top_bar-sub-menu-text-size:16px,
+    top_bar-sub-menu-color:#000,
+
+    //  SIDEBAR
+    side_bar-title-size:22px,
+    side_bar-title-color:#000,
+    side_bar-menu-text-size:18px,
+    side_bar-menu-color:#000,
+    side_bar-sub-menu-text-size:16px,
+    side_bar-sub-menu-color:#000,
+
+    //  HEADER
+
+    //  TABLE
+
+    //  FORM
+
+    //  CARD
+
+    //  TABLE
+
+    //  LIST
+
+    //  ICON
+
+    //  MENU
+
+    //  TREE
+
+    //  BREADCRUMB
+
+    //  TIMELINE
+
+    //  LOADER
+
+
+
+  ),
+  theme-dark: (
+    bg-primary: #1a1a1a,
+    bg-secondary: #2d2d2d,
+    text-primary: #ffffff,
+    text-secondary: #cccccc,
+    accent-color: #00b3ff,
+    button-bg: #00b3ff,
+    button-text: #ffffff
+  ),
+  theme-custom: (
+    bg-primary: #2c3e50,
+    bg-secondary: #34495e,
+    text-primary: #ecf0f1,
+    text-secondary: #bdc3c7,
+    accent-color: #e74c3c,
+    button-bg: #e74c3c,
+    button-text: #ffffff
+  )
+);

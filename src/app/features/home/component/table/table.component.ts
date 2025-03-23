@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'custom-login',
+  selector: 'custom-table',
   standalone: true,
   imports: [],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  templateUrl: './table.component.html',
+  styleUrl: './table.component.scss'
 })
 export class LoginComponent {
 

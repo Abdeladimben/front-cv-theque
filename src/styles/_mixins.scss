@@ -1,4 +1,23 @@
 // _mixins.scss
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $value in $map {
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+// Function to get theme values
+@function t($key) {
+    @return map-get($theme-map, $key);
+}
+
 @mixin flex-center {
     display: flex;
     justify-content: center;

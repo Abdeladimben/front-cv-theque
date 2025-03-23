@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { NgIf, NgClass, NgTemplateOutlet, NgForOf } from '@angular/common';
 import { LayoutService } from '../../../../services/app.layout.service';
-import { MenuService } from '../../../../sidebar/app.menu.service';
+import { MenuService } from '../../../../services/app.menu.service';
 
 @Component({
     // eslint-disable-next-line @angular-eslint/component-selector
@@ -115,7 +115,7 @@ export class AppMenuitemComponent implements OnInit, OnDestroy {
         return this.root ? 'expanded' : (this.active ? 'expanded' : 'collapsed');
     }
 
-    @HostBinding('class.active-menuitem') 
+    @HostBinding('class.active-menuitem')
     get activeClass() {
         return this.active && !this.root;
     }

@@ -1,5 +1,16 @@
-$primary-color: #10161d;
-$secondary-color: #6c757d;
+.theme-light, .theme-dark {
+  @include themed() {
+    --primary-bg: #{t('bg-primary')};
+    --secondary-bg: #{t('bg-secondary')};
+    --primary-text: #{t('text-primary')};
+    --secondary-text: #{t('text-secondary')};
+    --accent: #{t('accent-color')};
+    --button-bg: #{t('button-bg')};
+    --button-text: #{t('button-text')};
+  }
+}
+
+
 
 /*      BACKGROUND      */
 
