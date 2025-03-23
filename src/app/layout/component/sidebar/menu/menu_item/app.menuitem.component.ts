@@ -3,7 +3,7 @@ import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
-import { NgIf, NgClass, NgTemplateOutlet, NgForOf } from '@angular/common';
+import { NgIf, NgClass, NgForOf } from '@angular/common';
 import { LayoutService } from '../../../../services/app.layout.service';
 import { MenuService } from '../../../../services/app.menu.service';
 
@@ -27,7 +27,6 @@ import { MenuService } from '../../../../services/app.menu.service';
         NgIf,
         NgForOf,
         NgClass,
-        NgTemplateOutlet,
         RouterModule
     ]
 })

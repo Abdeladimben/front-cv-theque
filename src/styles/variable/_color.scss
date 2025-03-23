@@ -1,12 +1,14 @@
+@use '../mixins' as mixins;
+
 .theme-light, .theme-dark {
-  @include themed() {
-    --primary-bg: #{t('bg-primary')};
-    --secondary-bg: #{t('bg-secondary')};
-    --primary-text: #{t('text-primary')};
-    --secondary-text: #{t('text-secondary')};
-    --accent: #{t('accent-color')};
-    --button-bg: #{t('button-bg')};
-    --button-text: #{t('button-text')};
+  @include mixins.themed() {
+    --primary-bg: #{mixins.t('bg-primary')};
+    --secondary-bg: #{mixins.t('bg-secondary')};
+    --primary-text: #{mixins.t('text-primary')};
+    --secondary-text: #{mixins.t('text-secondary')};
+    --accent: #{mixins.t('accent-color')};
+    --button-bg: #{mixins.t('button-bg')};
+    --button-text: #{mixins.t('button-text')};
   }
 }
 

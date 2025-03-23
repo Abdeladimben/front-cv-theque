@@ -1,7 +1,8 @@
-// _mixins.scss
+// _mixins.scscolors
+@use 'theme' as theme;
 
 @mixin themed() {
-  @each $theme, $map in $themes {
+  @each $theme, $map in theme.$themes {
     .theme-#{$theme} & {
       $theme-map: () !global;
       @each $key, $value in $map {

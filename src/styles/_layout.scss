@@ -1,16 +1,17 @@
-@import 'layout/variables';
-@import "layout/mixins";
-@import "layout/preloading";
-@import "layout/main";
-@import "layout/topbar";
-@import "layout/menu";
-@import "layout/config";
-@import "layout/content";
-@import "layout/footer";
-@import "layout/responsive";
-@import "layout/utils";
-@import "layout/typography";
+@use 'layout/variables' as *;
+@use "layout/mixins" as *;
+@use "layout/preloading" as *;
+@use "layout/main" as *;
+@use "layout/topbar" as *;
+@use "layout/menu" as *;
+@use "layout/config" as *;
+@use "layout/content" as *;
+@use "layout/footer" as *;
+@use "layout/responsive" as *;
+@use "layout/utils" as *;
+@use "layout/typography" as *;
+@use "variable/color" as color;
 
 .layout-background{
-    background:$background-light__blue-gardient__color;
+    background:color.$background-light__blue-gardient__color;
 }

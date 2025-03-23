@@ -6,7 +6,7 @@ import { ButtonModule } from 'primeng/button';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { SidebarModule } from 'primeng/sidebar';
-import { NgClass, NgForOf, NgIf, NgTemplateOutlet } from '@angular/common';
+import { NgClass, NgForOf, NgIf } from '@angular/common';
 
 import { ThemeEnum } from '../../core/enums/theme.enum';
 import { MenuService } from '../services/app.menu.service';
@@ -19,7 +19,6 @@ import { MenuService } from '../services/app.menu.service';
         NgIf,
         NgForOf,
         NgClass,
-        NgTemplateOutlet,
         FormsModule,
         ReactiveFormsModule,
         SidebarModule,

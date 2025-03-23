@@ -1,2 +1,2 @@
-@import 'variable/color';
-@import 'variable/font';
+@use 'variable/color' as *;
+@use 'variable/font'  as *;
